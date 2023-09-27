@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { device } from '../utils/variables';
 import promo from '../images/promo_img.jpg';
-import MyBtnLink from './UI/button/MyBtn';
+import MyBtnLink from './UI/button/MyBtnLink';
 
 const PromoSection = styled.div`
   display: flex;
@@ -38,6 +39,10 @@ const PromoTitle = styled.h1`
   padding: 0;
   margin: 0;
   z-index: 3;
+    @media ${device.tablet} {
+      font-size: 26px;
+      line-height: 28px;
+    };
 `;
 
 const PromoSubTitle = styled.span`
@@ -51,6 +56,10 @@ const PromoSubTitle = styled.span`
   padding: 0;
   margin: 0;
   z-index: 3;
+    @media ${device.tablet} {
+      font-size: 16px;
+      line-height: 18px;
+    };
 `;
 
 const PromoLogoText = styled.span`
@@ -63,6 +72,10 @@ const PromoLogoText = styled.span`
   padding: 0;
   margin: 0;
   z-index: 3;
+    @media ${device.tablet} {
+      font-size: 34px;
+      line-height: 36px;
+    };
 `;
 
 const Promo = () => {
@@ -70,8 +83,8 @@ const Promo = () => {
     <PromoSection>
       <PromoLogoText>CANDELLE</PromoLogoText>
       <PromoSubTitle>горим с любовью</PromoSubTitle>
-      <PromoTitle>Крупнейший российский производитель формовых и <br/> контейнерных свечей</PromoTitle>
-      <MyBtnLink text="в каталог" zIndex="3"/>
+      <PromoTitle>Российский производитель формовых и <br/> контейнерных свечей</PromoTitle>
+      <MyBtnLink text="в каталог" zindex="3"/>
       
     </PromoSection>
   );

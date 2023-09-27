@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { device } from '../../../utils/variables';
 
-const ButtonLink = styled.a`
+const Button = styled.button`
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -21,15 +22,26 @@ const ButtonLink = styled.a`
   border: none;
   border-radius: 60px;
   letter-spacing: 2px;
-  z-index: ${props => props.zIndex || 1};
+  z-index: ${props => props.zindex || 1};
+  cursor: pointer;
+  transition: 0.5s;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #c7c7c7;
+      color: #c7c7c7;
+    };
+    @media ${device.tablet} {
+      font-size: 20px;
+      line-height: 22px;
+    };
 `;
 
 
 
-const MyBtnLink = ({text, ...props}) => {
+const MyBtn = ({text, ...props}) => {
   return (
-    <ButtonLink {...props}>{text}</ButtonLink>
+    <Button {...props}>{text}</Button>
   );
 }
 
-export default MyBtnLink;
+export default MyBtn;

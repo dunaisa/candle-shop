@@ -3,6 +3,9 @@ import styled from "styled-components/macro";
 import Header from "./components/Header";
 import Promo from "./components/Promo";
 import About from "./components/About";
+import Delivery from "./components/Delivery";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -20,9 +23,12 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <AppWrapper>
-      <Header/>
+      {/* <Header/> */}
       <Promo/>
       <About/>
+      <Form/>
+      <Delivery/>
+      <Footer/>
       
     </AppWrapper>
   );
