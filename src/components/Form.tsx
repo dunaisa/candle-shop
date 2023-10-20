@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+
+import styled from 'styled-components';
 import { device } from '../utils/variables';
 import formImg from "../images/form-img.jpg"
 import MyBtn from './UI/button/MyBtn';
@@ -24,6 +24,9 @@ const FormSWrapper = styled.div`
   padding: 0;
   margin: 0;
   width: 100%;
+  @media ${device.laptop} {
+    flex-wrap: wrap;
+  };
 `;
 
 const FormTitle = styled.h2`
@@ -73,9 +76,13 @@ const FormInput = styled.input`
   line-height: 26px;
   color: #c7c7c7;
   text-align: left;
+    &::placeholder {
+      color: #c7c7c7;
+    }
     @media ${device.tablet} {
       font-size: 18px;
       line-height: 22px;
+      margin: 0 0 20px 0;
     };
 `;
 
@@ -95,13 +102,16 @@ const FormTextaria = styled.textarea`
   color: #c7c7c7;
   text-align: left;
   resize: none;
+  &::placeholder {
+    color: #c7c7c7;
+  }
     @media ${device.tablet} {
       font-size: 18px;
       line-height: 22px;
     };
 `;
 
-const Form = () => {
+function Form(): JSX.Element {
   return (
     <FormSection>
       <FormTitle>Заказать обратный звонок</FormTitle>
@@ -110,7 +120,7 @@ const Form = () => {
         <FormField>
           <FormInput type="text" name="name" id="name" placeholder="Ваше имя" required/>
           <FormInput type="text" name="text" id="text" placeholder="Ваш телефон" required/>
-          <FormTextaria type="text" name="name" id="name" placeholder="Ваш комментарий" required/>
+          <FormTextaria name="name" id="name" placeholder="Ваш комментарий" required/>
           <MyBtn text="отправить"/>
 
 

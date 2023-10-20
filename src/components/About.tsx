@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+
+import styled from 'styled-components';
 import { device } from '../utils/variables';
 import ideasIcon from '../images/ideas-icon.png';
 import handMadeIcon from '../images/hand-made-icon.png';
@@ -132,7 +132,7 @@ const ItemText = styled.p`
     };
 `;
 
-const About = () => {
+function About(): JSX.Element {
   return (
     <AboutSection>
       <AboutTitle>О нас</AboutTitle>

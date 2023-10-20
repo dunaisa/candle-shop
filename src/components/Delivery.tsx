@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+
+import styled from 'styled-components';
 import { device } from '../utils/variables';
 
 const DeliverySection = styled.div`
@@ -79,7 +79,7 @@ const DeliveryBlockText = styled.p`
     };
 `;
 
-const Delivery = () => {
+function Delivery(): JSX.Element {
   return (
     <DeliverySection>
       <DeliveryTitle>Доставка</DeliveryTitle>

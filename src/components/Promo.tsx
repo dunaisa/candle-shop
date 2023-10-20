@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+
+import styled from 'styled-components';
 import { device } from '../utils/variables';
 import promo from '../images/promo_img.jpg';
 import MyBtnLink from './UI/button/MyBtnLink';
@@ -78,13 +78,13 @@ const PromoLogoText = styled.span`
     };
 `;
 
-const Promo = () => {
+function Promo(): JSX.Element {
   return (
     <PromoSection>
       <PromoLogoText>CANDELLE</PromoLogoText>
       <PromoSubTitle>горим с любовью</PromoSubTitle>
       <PromoTitle>Российский производитель формовых и <br/> контейнерных свечей</PromoTitle>
-      <MyBtnLink text="в каталог" zindex="3"/>
+      <MyBtnLink text="в каталог" zindex="3" to='/catalog'/>
       
     </PromoSection>
   );

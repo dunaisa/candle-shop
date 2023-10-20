@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+
+import styled from 'styled-components';
 import { device } from '../utils/variables';
 import tg from '../images/tg.png';
 import vk from '../images/vk.png';
@@ -7,6 +7,7 @@ import vk from '../images/vk.png';
 const ContactsSection = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 70px 150px;
   margin: 0;
   background-color: #c7c7c7;
@@ -36,12 +37,6 @@ const ContactsTitle = styled.h2`
       font-size: 28px;
       line-height: 30px;
     };
-`;
-
-const ContactsBlocks = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 `;
 
 const ContactsBlock = styled.div`
@@ -93,7 +88,7 @@ const ContactsLinkIcon = styled.img`
   height: 30px;
 `;
 
-const Footer = () => {
+function Footer(): JSX.Element {
   return (
     <ContactsSection> 
       <ContactsTitle>Контакты</ContactsTitle>
@@ -111,10 +106,10 @@ const Footer = () => {
           8(800)956-71-01
           </ContactsLink>
           <ContactsBlock>
-            <ContactsLink target='_blank' href='#' name="tg">
+            <ContactsLink target='_blank' href='#'>
               <ContactsLinkIcon src={tg}/>
             </ContactsLink>
-            <ContactsLink target='_blank' href='#' name="vk">
+            <ContactsLink target='_blank' href='#'>
               <ContactsLinkIcon src={vk} />
             </ContactsLink>
           </ContactsBlock>
