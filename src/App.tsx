@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 import Main from "./pages/Main";
 import Catalog from "./pages/Catalog";
+import HeaderBurger from "./components/HeaderBurger";
+import Layout from "./components/Layout";
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -21,11 +23,13 @@ function App(): JSX.Element {
   return (
     <AppWrapper>
       <BrowserRouter>
-        <Routes>          
-          <Route path="/" element={<Main />} />
-          <Route path="/catalog" element={<Catalog />} />
+        <Layout>
+          <Routes>          
+            <Route path="/" element={<Main />} />
+            <Route path="/catalog" element={<Catalog />} />
 
-        </Routes>
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </AppWrapper>
   );
